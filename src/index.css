@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@400;500;700;800&family=Almarai:wght@300;400;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand Colors - Official Sunrise Center Palette */
+    --brand-primary: 197 73% 47%;
+    --brand-primary-hover: 197 69% 40%;
+    --brand-primary-active: 197 77% 51%;
+    --brand-secondary: 197 82% 90%;
+    --brand-secondary-dark: 197 35% 75%;
+    --brand-secondary-light: 180 100% 97%;
+    --brand-accent: 48 89% 56%;
+    --text-main: 0 2% 19%;
+    --bg-main: 0 0% 100%;
+
+    /* Theme Colors mapped to Brand Colors */
+    --background: 197 82% 90%;
+    --foreground: 0 2% 19%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 2% 19%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 2% 19%;
+    --primary: 197 73% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 197 82% 90%;
+    --secondary-foreground: 0 2% 19%;
+    --tertiary: 197 77% 51%;
+    --tertiary-foreground: 0 0% 100%;
+    --neutral: 197 82% 90%;
+    --neutral-foreground: 0 2% 19%;
+    --muted: 197 35% 75%;
+    --muted-foreground: 0 2% 40%;
+    --accent: 48 89% 56%;
+    --accent-foreground: 0 2% 19%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 197 35% 85%;
+    --input: 197 35% 85%;
+    --ring: 197 73% 47%;
+    --radius: 12px;
+    --success: 160 85% 38%;
+    --warning: 48 89% 56%;
+  }
+
+  .dark {
+    --background: 197 30% 12%;
+    --foreground: 197 82% 96%;
+    --card: 197 25% 18%;
+    --card-foreground: 197 82% 96%;
+    --popover: 197 25% 18%;
+    --popover-foreground: 197 82% 96%;
+    --primary: 197 73% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 197 35% 30%;
+    --secondary-foreground: 197 82% 96%;
+    --tertiary: 197 77% 51%;
+    --tertiary-foreground: 0 0% 100%;
+    --neutral: 197 25% 25%;
+    --neutral-foreground: 197 82% 96%;
+    --muted: 197 25% 25%;
+    --muted-foreground: 197 20% 65%;
+    --accent: 48 89% 56%;
+    --accent-foreground: 0 2% 19%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 197 25% 25%;
+    --input: 197 25% 25%;
+    --ring: 197 73% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html,
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cairo', 'Almarai', sans-serif;
+    @apply text-foreground font-bold;
+    letter-spacing: -0.02em;
+  }
+
+  p, span, div, a {
+    @apply text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-tertiary to-primary bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-2xl;
+  }
+  
+  .glass-effect-dark {
+    @apply bg-gray-900/80 backdrop-blur-xl border border-gray-800/50 shadow-2xl;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px hsl(197 73% 47% / 0.5);
+    }
+    to {
+      box-shadow: 0 0 30px hsl(197 73% 47% / 0.8), 0 0 40px hsl(197 73% 47% / 0.6);
+    }
+  }
+}

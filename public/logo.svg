@@ -1,0 +1,46 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sun rays (accent color) -->
+  <g id="sun-rays">
+    <path d="M256 80 L256 40" stroke="#F2D42E" stroke-width="12" stroke-linecap="round"/>
+    <path d="M256 472 L256 432" stroke="#F2D42E" stroke-width="12" stroke-linecap="round"/>
+    <path d="M432 256 L472 256" stroke="#F2D42E" stroke-width="12" stroke-linecap="round"/>
+    <path d="M40 256 L80 256" stroke="#F2D42E" stroke-width="12" stroke-linecap="round"/>
+    <path d="M391 121 L420 92" stroke="#F2D42E" stroke-width="12" stroke-linecap="round"/>
+    <path d="M92 420 L121 391" stroke="#F2D42E" stroke-width="12" stroke-linecap="round"/>
+    <path d="M391 391 L420 420" stroke="#F2D42E" stroke-width="12" stroke-linecap="round"/>
+    <path d="M92 92 L121 121" stroke="#F2D42E" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Sun circle (accent color) -->
+  <circle cx="256" cy="256" r="80" fill="#F2D42E"/>
+  <circle cx="256" cy="256" r="70" fill="#FFFFFF"/>
+  <circle cx="256" cy="256" r="60" fill="url(#sunGradient)"/>
+  
+  <!-- Children silhouettes -->
+  <!-- Left child (primary color) -->
+  <g id="left-child">
+    <circle cx="180" cy="320" r="25" fill="#24A3CC"/>
+    <path d="M180 345 Q160 380 140 420 L160 420 L180 380 L200 420 L220 420 Q200 380 180 345 Z" fill="#24A3CC"/>
+    <path d="M155 360 L130 400" stroke="#24A3CC" stroke-width="15" stroke-linecap="round"/>
+    <path d="M205 360 L230 400" stroke="#24A3CC" stroke-width="15" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Right child (secondary dark color) -->
+  <g id="right-child">
+    <circle cx="332" cy="320" r="25" fill="#ACCAD5"/>
+    <path d="M332 345 Q312 380 292 420 L312 420 L332 380 L352 420 L372 420 Q352 380 332 345 Z" fill="#ACCAD5"/>
+    <path d="M307 360 L282 400" stroke="#ACCAD5" stroke-width="15" stroke-linecap="round"/>
+    <path d="M357 360 L382 400" stroke="#ACCAD5" stroke-width="15" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Arc/bridge (primary color) -->
+  <path d="M120 420 Q256 360 392 420" stroke="#24A3CC" stroke-width="20" fill="none" stroke-linecap="round"/>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="sunGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F2D42E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
